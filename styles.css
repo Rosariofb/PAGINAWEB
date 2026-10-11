@@ -748,6 +748,56 @@ ul {
   border-radius: var(--radius-full);
 }
 
+/* ==================== SHOWCASE DE PANTALLAS (FACTURA1 Y FACTURA2) ==================== */
+.showcase-img-card {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.showcase-img-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 14px 40px rgba(0, 210, 255, 0.22);
+}
+
+.showcase-img-header h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.4rem;
+}
+
+.showcase-img-container {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: #050a14;
+}
+
+.process-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.showcase-img-card:hover .process-img {
+  transform: scale(1.02);
+}
+
+.showcase-img-footer p {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
 /* ==================== FORMULARIO DE CONTACTO DIRECTO ==================== */
 .contact-card {
   max-width: 860px;
@@ -784,41 +834,45 @@ ul {
 
 .form-label {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--color-text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00d2ff;
   margin-bottom: 0.45rem;
 }
 
 .required-star {
-  color: var(--color-primary);
+  color: #f59e0b;
   font-weight: bold;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 0.85rem 1.1rem;
-  background: rgba(7, 12, 24, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.9rem 1.15rem;
+  background-color: #dbeafe; /* Fondo azul claro */
+  border: 2px solid #60a5fa; /* Borde azul */
   border-radius: var(--radius-sm);
-  color: #ffffff;
+  color: #034694; /* Letras azules */
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 600;
   transition: all var(--transition-fast);
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: #64748b;
+  color: #2563eb; /* Placeholder azul suave */
+  font-weight: 400;
+  opacity: 0.75;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  background: rgba(10, 18, 36, 0.95);
-  box-shadow: 0 0 15px rgba(0, 210, 255, 0.28);
+  background-color: #eff6ff;
+  border-color: #00d2ff;
+  color: #022b5e;
+  box-shadow: 0 0 16px rgba(0, 210, 255, 0.45);
 }
 
 .form-actions {
