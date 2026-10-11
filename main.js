@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Actualizar reproductor y textos
       if (mainVideoPlayer && newSrc) {
         mainVideoPlayer.src = newSrc;
+        if (typeof mainVideoPlayer.load === 'function') {
+          mainVideoPlayer.load();
+          mainVideoPlayer.play().catch(() => {});
+        }
       }
       if (videoTitle && newTitle) {
         videoTitle.textContent = newTitle;
