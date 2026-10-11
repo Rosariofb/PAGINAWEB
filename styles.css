@@ -7,11 +7,12 @@
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Colores del Sistema */
-  --color-bg: #070c18;
-  --color-bg-alt: #0c1427;
-  --color-card: rgba(15, 23, 42, 0.75);
-  --color-card-border: rgba(255, 255, 255, 0.1);
-  --color-card-hover: rgba(30, 58, 110, 0.4);
+  /* Colores del Sistema - Aclarado 2 tonos (Azul zafiro corporativo vibrante y luminoso) */
+  --color-bg: #132952;
+  --color-bg-alt: #1a3668;
+  --color-card: rgba(24, 48, 92, 0.78);
+  --color-card-border: rgba(255, 255, 255, 0.18);
+  --color-card-hover: rgba(45, 88, 168, 0.52);
 
   --color-primary: #00d2ff;
   --color-primary-rgb: 0, 210, 255;
@@ -30,7 +31,7 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.22);
   --shadow-glow: 0 0 35px rgba(0, 210, 255, 0.2);
 
   --transition-fast: 0.2s ease;
@@ -53,7 +54,7 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
-  background-image: linear-gradient(rgba(7, 12, 24, 0.75), rgba(7, 12, 24, 0.82)), url('FONDO.jpg');
+  background-image: linear-gradient(rgba(19, 41, 82, 0.36), rgba(19, 41, 82, 0.46)), url('FONDO.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -92,7 +93,7 @@ ul {
 }
 
 .bg-darker {
-  background-color: rgba(12, 20, 39, 0.72);
+  background-color: rgba(19, 41, 82, 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -228,10 +229,10 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(7, 12, 24, 0.85);
+  background: rgba(18, 38, 75, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all var(--transition-normal);
 }
 
@@ -324,9 +325,9 @@ ul {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(7, 12, 24, 0.65) 0%,
-    rgba(10, 20, 42, 0.45) 50%,
-    rgba(5, 10, 20, 0.70) 100%
+    rgba(19, 41, 82, 0.45) 0%,
+    rgba(28, 60, 120, 0.25) 50%,
+    rgba(16, 36, 72, 0.48) 100%
   );
   z-index: 1;
 }
@@ -602,8 +603,8 @@ ul {
 
 .video-info-bar {
   padding: 1.5rem 1.8rem;
-  background: rgba(10, 18, 36, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 44, 88, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .video-current-title {
@@ -776,8 +777,8 @@ ul {
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background-color: #050a14;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #142a54;
 }
 
 .process-img {
@@ -803,9 +804,9 @@ ul {
   max-width: 860px;
   margin-inline: auto;
   padding: 3.5rem 2.8rem;
-  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.22) 0%, rgba(10, 20, 42, 0.85) 100%);
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.28) 0%, rgba(20, 44, 90, 0.90) 100%);
   border: 1px solid rgba(0, 210, 255, 0.35);
-  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.35);
 }
 
 .contact-header {
@@ -918,8 +919,8 @@ ul {
 
 /* ==================== FOOTER ==================== */
 .site-footer {
-  background-color: #040810;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: #0f2244;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
   padding-block: 3.5rem 2.5rem;
 }
 
@@ -1027,7 +1028,7 @@ ul {
     top: 4.5rem;
     left: 0;
     width: 100%;
-    background: rgba(7, 12, 24, 0.98);
+    background: rgba(18, 38, 75, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 2rem;
