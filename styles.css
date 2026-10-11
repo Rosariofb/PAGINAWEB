@@ -7,12 +7,12 @@
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Colores del Sistema */
-  /* Colores del Sistema - Aclarado 2 tonos (Azul zafiro corporativo vibrante y luminoso) */
-  --color-bg: #132952;
-  --color-bg-alt: #1a3668;
-  --color-card: rgba(24, 48, 92, 0.78);
-  --color-card-border: rgba(255, 255, 255, 0.18);
-  --color-card-hover: rgba(45, 88, 168, 0.52);
+  /* Colores del Sistema - Aclarado más visible (Azul zafiro corporativo vibrante y luminoso) */
+  --color-bg: #1c3d73;
+  --color-bg-alt: #265094;
+  --color-card: rgba(30, 62, 120, 0.82);
+  --color-card-border: rgba(255, 255, 255, 0.22);
+  --color-card-hover: rgba(50, 95, 180, 0.55);
 
   --color-primary: #00d2ff;
   --color-primary-rgb: 0, 210, 255;
@@ -20,8 +20,8 @@
   --color-secondary-hover: #1d4ed8;
 
   --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-text-dim: #64748b;
+  --color-text-muted: #cbd5e1;
+  --color-text-dim: #94a3b8;
 
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #20ba59;
@@ -31,8 +31,8 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.22);
-  --shadow-glow: 0 0 35px rgba(0, 210, 255, 0.2);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.20);
+  --shadow-glow: 0 0 35px rgba(0, 210, 255, 0.25);
 
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -54,7 +54,7 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
-  background-image: linear-gradient(rgba(19, 41, 82, 0.36), rgba(19, 41, 82, 0.46)), url('FONDO.jpg');
+  background-image: linear-gradient(rgba(26, 54, 102, 0.18), rgba(26, 54, 102, 0.28)), url('FONDO.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -93,7 +93,7 @@ ul {
 }
 
 .bg-darker {
-  background-color: rgba(19, 41, 82, 0.62);
+  background-color: rgba(28, 56, 108, 0.48);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -229,10 +229,10 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(18, 38, 75, 0.88);
+  background: rgba(28, 58, 112, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   transition: all var(--transition-normal);
 }
 
@@ -804,13 +804,28 @@ ul {
   max-width: 860px;
   margin-inline: auto;
   padding: 3.5rem 2.8rem;
-  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.28) 0%, rgba(20, 44, 90, 0.90) 100%);
-  border: 1px solid rgba(0, 210, 255, 0.35);
-  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.35);
+  background-color: #dbeafe !important; /* Fondo azul claro del formulario */
+  border: 2px solid #3b82f6 !important;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25);
+  color: #0a2540 !important;
 }
 
 .contact-header {
   margin-bottom: 2.5rem;
+}
+
+.contact-header .section-subtitle {
+  color: #0284c7 !important;
+  font-weight: 800;
+}
+
+.contact-header .section-title {
+  color: #0a2540 !important; /* Letras azul oscuro */
+}
+
+.contact-header .section-desc {
+  color: #1e3a5f !important; /* Letras azul oscuro */
 }
 
 .contact-form {
@@ -837,12 +852,12 @@ ul {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
-  color: #00d2ff;
+  color: #0a2540 !important; /* Letras azul oscuro */
   margin-bottom: 0.45rem;
 }
 
 .required-star {
-  color: #f59e0b;
+  color: #dc2626;
   font-weight: bold;
 }
 
@@ -850,10 +865,10 @@ ul {
 .form-textarea {
   width: 100%;
   padding: 0.9rem 1.15rem;
-  background-color: #dbeafe; /* Fondo azul claro */
-  border: 2px solid #60a5fa; /* Borde azul */
+  background-color: #f0f7ff !important; /* Fondo azul claro */
+  border: 2px solid #2563eb !important; /* Borde azul */
   border-radius: var(--radius-sm);
-  color: #034694; /* Letras azules */
+  color: #032b69 !important; /* Letras azul oscuro */
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
@@ -862,18 +877,18 @@ ul {
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: #2563eb; /* Placeholder azul suave */
+  color: #3b82f6 !important; /* Placeholder azul */
   font-weight: 400;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  background-color: #eff6ff;
-  border-color: #00d2ff;
-  color: #022b5e;
-  box-shadow: 0 0 16px rgba(0, 210, 255, 0.45);
+  background-color: #ffffff !important;
+  border-color: #0284c7 !important;
+  color: #02204c !important;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.45) !important;
 }
 
 .form-actions {
@@ -887,14 +902,21 @@ ul {
 
 .btn-submit {
   min-width: 200px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8) !important;
 }
 
 .direct-contact-bar {
   text-align: center;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
+  border-top: 1px solid rgba(10, 37, 64, 0.15);
+  font-size: 0.92rem;
+  color: #1e3a5f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -903,18 +925,18 @@ ul {
 }
 
 .direct-pill {
-  color: var(--color-primary);
-  font-weight: 600;
-  background: rgba(0, 210, 255, 0.1);
-  border: 1px solid rgba(0, 210, 255, 0.25);
-  padding: 0.3rem 0.8rem;
+  color: #032b69 !important;
+  font-weight: 700;
+  background: #bfdbfe !important;
+  border: 1px solid #60a5fa !important;
+  padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
 }
 
 .direct-pill:hover {
-  background: rgba(0, 210, 255, 0.2);
-  color: #ffffff;
+  background: #93c5fd !important;
+  color: #021a40 !important;
 }
 
 /* ==================== FOOTER ==================== */

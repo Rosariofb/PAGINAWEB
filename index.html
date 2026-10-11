@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -416,11 +416,11 @@
     <!-- ==================== SECCIÓN CONTACTO DIRECTO ==================== -->
     <section class="section-padding" id="contacto">
       <div class="container">
-        <div class="contact-card glass-card">
+        <div class="contact-card glass-card" style="background-color: #dbeafe; border: 2px solid #3b82f6; color: #0a2540; box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25);">
           <div class="contact-header text-center">
-            <span class="section-subtitle">¿TIENES DUDAS O DESEAS UNA DEMOSTRACIÓN?</span>
-            <h2 class="section-title">Contáctanos Directamente</h2>
-            <p class="section-desc">
+            <span class="section-subtitle" style="color: #0284c7; font-weight: 800;">¿TIENES DUDAS O DESEAS UNA DEMOSTRACIÓN?</span>
+            <h2 class="section-title" style="color: #0a2540;">Contáctanos Directamente</h2>
+            <p class="section-desc" style="color: #1e3a5f;">
               Completa el siguiente formulario con tus datos y nos comunicaremos contigo a la brevedad para asesorarte sobre el sistema LYRAPOINT.
             </p>
           </div>
@@ -434,7 +434,7 @@
             <div class="form-grid">
               <!-- Nombre de la empresa o persona -->
               <div class="form-group form-group-full">
-                <label for="nombre" class="form-label">
+                <label for="nombre" class="form-label" style="color: #0a2540;">
                   Nombre de la empresa o solicitante <span class="required-star">*</span>
                 </label>
                 <input 
@@ -442,13 +442,14 @@
                   id="nombre" 
                   name="nombre_o_empresa" 
                   class="form-input" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Ej: Inversiones Los Andes o Carlos Pérez" 
                   required>
               </div>
 
               <!-- Teléfono -->
               <div class="form-group">
-                <label for="telefono" class="form-label">
+                <label for="telefono" class="form-label" style="color: #0a2540;">
                   Teléfono / Celular <span class="required-star">*</span>
                 </label>
                 <input 
@@ -456,13 +457,14 @@
                   id="telefono" 
                   name="telefono" 
                   class="form-input" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Ej: +58 412 1234567" 
                   required>
               </div>
 
               <!-- Correo -->
               <div class="form-group">
-                <label for="correo" class="form-label">
+                <label for="correo" class="form-label" style="color: #0a2540;">
                   Correo Electrónico <span class="required-star">*</span>
                 </label>
                 <input 
@@ -470,13 +472,14 @@
                   id="correo" 
                   name="correo" 
                   class="form-input" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Ej: tuempresa@correo.com" 
                   required>
               </div>
 
               <!-- Ciudad -->
               <div class="form-group">
-                <label for="ciudad" class="form-label">
+                <label for="ciudad" class="form-label" style="color: #0a2540;">
                   Ciudad <span class="required-star">*</span>
                 </label>
                 <input 
@@ -484,13 +487,14 @@
                   id="ciudad" 
                   name="ciudad" 
                   class="form-input" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Ej: Caracas, Valencia, Maracaibo..." 
                   required>
               </div>
 
               <!-- Tipo de Negocio -->
               <div class="form-group">
-                <label for="tipo_negocio" class="form-label">
+                <label for="tipo_negocio" class="form-label" style="color: #0a2540;">
                   Tipo de Negocio <span class="required-star">*</span>
                 </label>
                 <input 
@@ -499,6 +503,7 @@
                   name="tipo_negocio" 
                   list="tiposNegocioList" 
                   class="form-input" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Ej: Supermercado, Farmacia, Ferretería..." 
                   required>
                 <datalist id="tiposNegocioList">
@@ -516,7 +521,7 @@
 
               <!-- Asunto -->
               <div class="form-group form-group-full">
-                <label for="asunto" class="form-label">
+                <label for="asunto" class="form-label" style="color: #0a2540;">
                   Asunto o Consulta <span class="required-star">*</span>
                 </label>
                 <textarea 
@@ -524,6 +529,7 @@
                   name="asunto" 
                   class="form-textarea" 
                   rows="4" 
+                  style="background-color: #f0f7ff; color: #032b69; border: 2px solid #2563eb;"
                   placeholder="Cuéntanos brevemente qué información requieres o qué dudas tienes sobre inventario y facturación..." 
                   required></textarea>
               </div>
@@ -543,9 +549,9 @@
             </div>
 
             <!-- Datos de contacto directos -->
-            <div class="direct-contact-bar">
+            <div class="direct-contact-bar" style="color: #1e3a5f; border-top: 1px solid rgba(10, 37, 64, 0.15);">
               <span>O si prefieres, escríbenos directamente a:</span>
-              <a href="mailto:Lyrasoft2026@gmail.com" class="direct-pill">
+              <a href="mailto:Lyrasoft2026@gmail.com" class="direct-pill" style="color: #032b69; background: #bfdbfe; border: 1px solid #60a5fa;">
                 ✉ Lyrasoft2026@gmail.com
               </a>
             </div>
@@ -585,6 +591,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>

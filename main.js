@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 40) {
-        header.style.background = 'rgba(18, 38, 75, 0.96)';
+        header.style.background = 'rgba(28, 58, 112, 0.96)';
         header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.35)';
       } else {
-        header.style.background = 'rgba(18, 38, 75, 0.88)';
+        header.style.background = 'rgba(28, 58, 112, 0.90)';
         header.style.boxShadow = 'none';
       }
     });
