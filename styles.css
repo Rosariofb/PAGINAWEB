@@ -53,6 +53,11 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
+  background-image: linear-gradient(rgba(7, 12, 24, 0.75), rgba(7, 12, 24, 0.82)), url('FONDO.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--color-text-main);
   line-height: 1.6;
   overflow-x: hidden;
@@ -87,7 +92,9 @@ ul {
 }
 
 .bg-darker {
-  background-color: var(--color-bg-alt);
+  background-color: rgba(12, 20, 39, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Tipografía de Sección */
@@ -317,9 +324,9 @@ ul {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(7, 12, 24, 0.92) 0%,
-    rgba(10, 20, 42, 0.88) 50%,
-    rgba(5, 10, 20, 0.94) 100%
+    rgba(7, 12, 24, 0.65) 0%,
+    rgba(10, 20, 42, 0.45) 50%,
+    rgba(5, 10, 20, 0.70) 100%
   );
   z-index: 1;
 }
