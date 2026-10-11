@@ -748,38 +748,118 @@ ul {
   border-radius: var(--radius-full);
 }
 
-/* ==================== CTA BANNER / CONTACTO ==================== */
-.cta-banner {
-  padding: 4rem 2.5rem;
-  text-align: center;
-  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.25) 0%, rgba(10, 20, 42, 0.75) 100%);
-  border: 1px solid rgba(0, 210, 255, 0.3);
-}
-
-.cta-content {
-  max-width: 680px;
+/* ==================== FORMULARIO DE CONTACTO DIRECTO ==================== */
+.contact-card {
+  max-width: 860px;
   margin-inline: auto;
+  padding: 3.5rem 2.8rem;
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.22) 0%, rgba(10, 20, 42, 0.85) 100%);
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
 }
 
-.cta-title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 1rem;
+.contact-header {
+  margin-bottom: 2.5rem;
 }
 
-.cta-desc {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  margin-bottom: 2.2rem;
+.contact-form {
+  width: 100%;
 }
 
-.cta-buttons {
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
   display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.45rem;
+}
+
+.required-star {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: rgba(7, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #64748b;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(10, 18, 36, 0.95);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.28);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-submit {
+  min-width: 200px;
+}
+
+.direct-contact-bar {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.direct-pill {
+  color: var(--color-primary);
+  font-weight: 600;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.direct-pill:hover {
+  background: rgba(0, 210, 255, 0.2);
+  color: #ffffff;
 }
 
 /* ==================== FOOTER ==================== */
@@ -920,6 +1000,14 @@ ul {
 
   .grid-2-columns {
     grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 2.5rem 1.4rem;
   }
 
   .footer-container {

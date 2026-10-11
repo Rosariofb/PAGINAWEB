@@ -61,13 +61,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Efecto Header al hacer scroll
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.style.background = 'rgba(7, 12, 24, 0.95)';
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.4)';
-    } else {
-      header.style.background = 'rgba(7, 12, 24, 0.85)';
-      header.style.boxShadow = 'none';
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.style.background = 'rgba(7, 12, 24, 0.95)';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.4)';
+      } else {
+        header.style.background = 'rgba(7, 12, 24, 0.85)';
+        header.style.boxShadow = 'none';
+      }
+    });
+  }
+
+  // 4. Enviar datos del formulario por WhatsApp
+  const btnWhatsapp = document.getElementById('btnWhatsappForm');
+  if (btnWhatsapp) {
+    btnWhatsapp.addEventListener('click', () => {
+      const nombre = document.getElementById('nombre')?.value.trim();
+      const tel = document.getElementById('telefono')?.value.trim();
+      const email = document.getElementById('correo')?.value.trim();
+      const ciudad = document.getElementById('ciudad')?.value.trim();
+      const tipo = document.getElementById('tipo_negocio')?.value.trim();
+      const asunto = document.getElementById('asunto')?.value.trim();
+
+      if (!nombre || !tel) {
+        alert('Por favor, indica al menos el nombre de la empresa/solicitante y un teléfono de contacto.');
+        return;
+      }
+
+      const text = `*SOLICITUD DE INFORMACIÓN - LYRAPOINT*\n\n` +
+        `*Empresa / Solicitante:* ${nombre || 'No indicado'}\n` +
+        `*Teléfono:* ${tel || 'No indicado'}\n` +
+        `*Correo:* ${email || 'No indicado'}\n` +
+        `*Ciudad:* ${ciudad || 'No indicada'}\n` +
+        `*Tipo de Negocio:* ${tipo || 'No indicado'}\n` +
+        `*Asunto:* ${asunto || 'Consulta general'}`;
+
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    });
+  }
 });
