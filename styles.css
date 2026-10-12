@@ -1082,6 +1082,86 @@ ul {
   background: linear-gradient(135deg, #1e40af, #1d4ed8) !important;
 }
 
+.btn-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spinBtn 0.7s linear infinite;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+@keyframes spinBtn {
+  to { transform: rotate(360deg); }
+}
+
+/* Alertas de Estado del Formulario */
+.form-alert {
+  padding: 1.25rem 1.6rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  animation: fadeInAlert 0.3s ease;
+}
+
+@keyframes fadeInAlert {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-alert.success {
+  background: #ecfdf5;
+  border: 2px solid #10b981;
+  color: #064e3b;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.2);
+}
+
+.form-alert.success h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #047857;
+  margin-bottom: 0.35rem;
+}
+
+.form-alert.success p {
+  font-size: 0.95rem;
+  color: #065f46;
+  line-height: 1.5;
+}
+
+.form-alert.error {
+  background: #fef2f2;
+  border: 2px solid #ef4444;
+  color: #7f1d1d;
+  box-shadow: 0 4px 18px rgba(239, 68, 68, 0.2);
+}
+
+.form-alert.error h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #b91c1c;
+  margin-bottom: 0.35rem;
+}
+
+.form-alert.error p {
+  font-size: 0.95rem;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
 .direct-contact-bar {
   text-align: center;
   padding-top: 1.5rem;
