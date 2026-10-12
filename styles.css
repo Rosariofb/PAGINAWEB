@@ -749,6 +749,177 @@ ul {
   border-radius: var(--radius-full);
 }
 
+.link-tag.tag-client {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  font-weight: 700;
+}
+
+/* Banner Exclusivo para Clientes */
+.client-exclusive-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 860px;
+  margin: 0 auto 2.5rem auto;
+  padding: 1.25rem 1.6rem;
+  background: rgba(22, 48, 96, 0.75);
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.client-banner-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 210, 255, 0.18);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-banner-text {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.55;
+}
+
+.client-banner-text strong {
+  color: #00d2ff;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.client-banner-text a {
+  color: #00d2ff;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.client-banner-text a:hover {
+  color: #ffffff;
+}
+
+/* Modal Informativo para Clientes */
+.client-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(4, 12, 28, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.client-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.client-modal-box {
+  width: 100%;
+  max-width: 500px;
+  background: #142c58;
+  border: 2px solid rgba(0, 210, 255, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.client-modal-backdrop.active .client-modal-box {
+  transform: translateY(0);
+}
+
+.client-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.modal-lock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+}
+
+.client-modal-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.client-modal-close:hover {
+  color: #ffffff;
+}
+
+.client-modal-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.client-modal-body p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.client-modal-callout {
+  background: rgba(10, 22, 46, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+.client-modal-callout p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.8rem;
+}
+
+.client-modal-footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.2rem;
+}
+
+.client-modal-footer p {
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text-dim);
+}
+
 /* ==================== SHOWCASE DE PANTALLAS (FACTURA1 Y FACTURA2) ==================== */
 .showcase-img-card {
   padding: 1.8rem;
@@ -1017,7 +1188,26 @@ ul {
     gap: 3rem;
   }
 
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .badge-pill {
+    margin-inline: auto;
+  }
+
+  .hero-title {
+    text-align: center;
+    margin-inline: auto;
+  }
+
   .hero-description {
+    text-align: center;
     margin-inline: auto;
   }
 
@@ -1075,8 +1265,99 @@ ul {
     text-align: center;
   }
 
+  /* Centrado Completo en Celular: Desde Soluciones hasta PyMEs */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .badge-pill {
+    margin-inline: auto;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 6.8vw, 2.5rem);
+    text-align: center;
+    margin-inline: auto;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    text-align: center;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-inline: auto;
+    max-width: 100%;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 390px;
+    margin-inline: auto;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+
   .grid-2-columns {
     grid-template-columns: 1fr;
+  }
+
+  .client-exclusive-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1.1rem;
+    gap: 0.9rem;
   }
 
   .form-grid {
@@ -1090,5 +1371,32 @@ ul {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+  }
+
+  .hero-stats {
+    max-width: 100%;
+    gap: 0.35rem;
+  }
+
+  .stat-number {
+    font-size: 1.15rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .client-modal-box {
+    padding: 1.8rem 1.2rem;
   }
 }

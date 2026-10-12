@@ -100,4 +100,63 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
     });
   }
+
+  // 5. Manejador de Recursos Exclusivos de Clientes (Modal)
+  const clientTriggers = document.querySelectorAll('.client-modal-trigger');
+  const clientModal = document.getElementById('clientModal');
+  const closeClientModal = document.getElementById('closeClientModal');
+  const clientModalTitle = document.getElementById('clientModalTitle');
+  const clientModalDesc = document.getElementById('clientModalDesc');
+  const modalWhatsappBtn = document.getElementById('modalWhatsappBtn');
+  const modalContactBtn = document.getElementById('modalContactBtn');
+
+  if (clientModal) {
+    clientTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const resourceName = trigger.getAttribute('data-resource') || 'Recurso de Clientes';
+        const resourceDesc = trigger.getAttribute('data-desc') || '';
+
+        if (clientModalTitle) clientModalTitle.textContent = resourceName;
+        if (clientModalDesc && resourceDesc) {
+          clientModalDesc.innerHTML = `${resourceDesc}<br><br><span style="color: #fbbf24; font-weight: 600;">🔒 Acceso Exclusivo:</span> Este recurso está disponible <strong>únicamente para clientes que ya adquirieron el sistema LYRAPOINT</strong> con licencia activa.`;
+        }
+
+        if (modalWhatsappBtn) {
+          const msg = `Hola, soy cliente de LYRAPOINT con licencia activa y deseo solicitar acceso a: *${resourceName}*.`;
+          modalWhatsappBtn.href = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+        }
+
+        clientModal.classList.add('active');
+        clientModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    const closeModal = () => {
+      clientModal.classList.remove('active');
+      clientModal.setAttribute('aria-hidden', 'true');
+    };
+
+    if (closeClientModal) {
+      closeClientModal.addEventListener('click', closeModal);
+    }
+
+    clientModal.addEventListener('click', (e) => {
+      if (e.target === clientModal) {
+        closeModal();
+      }
+    });
+
+    if (modalContactBtn) {
+      modalContactBtn.addEventListener('click', () => {
+        closeModal();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && clientModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
 });

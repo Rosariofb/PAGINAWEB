@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 
@@ -329,6 +329,7 @@
               <h4>Inventario y Fiscal</h4>
               <p>Reportes analíticos y conexión con The Factory TFHKA.</p>
               <span class="play-btn-pill">▶ Reproducir Video</span>
+            </div>
           </div>
 
           <div class="video-helper-note">
@@ -339,76 +340,99 @@
       </div>
     </section>
 
-    <!-- ==================== SECCIÓN ENLACES DE INTERÉS ==================== -->
+    <!-- ==================== SECCIÓN ENLACES DE INTERÉS (EXCLUSIVO CLIENTES) ==================== -->
     <section class="section-padding bg-darker" id="enlaces">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-subtitle">ACCESOS DIRECTOS</span>
+          <span class="section-subtitle">EXCLUSIVO PARA CLIENTES ACTIVOS</span>
           <h2 class="section-title">Enlaces y Sitios de Interés</h2>
           <p class="section-desc">
-            Encuentra aquí los vínculos directos a las plataformas relacionadas, manuales de usuario y recursos recomendados.
+            Estos accesos, manuales y herramientas operativas están disponibles <strong>únicamente para clientes que ya adquirieron el sistema LYRAPOINT</strong> con licencia activa.
           </p>
+        </div>
+
+        <!-- Banner de aviso exclusivo clientes -->
+        <div class="client-exclusive-banner">
+          <div class="client-banner-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <div class="client-banner-text">
+            <strong>Área Reservada para Clientes Registrados:</strong>
+            Los siguientes recursos (portal web, manuales, soporte técnico y actualizaciones) requieren validación de licencia activa o credenciales asignadas al adquirir el sistema. Si aún no eres cliente y deseas contratar LYRAPOINT, <a href="#contacto">solicita información o demostración aquí</a>.
+          </div>
         </div>
 
         <div class="grid grid-2-columns">
           
-          <!-- Enlace 1 -->
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="link-card glass-card">
+          <!-- Enlace 1: Portal de acceso web -->
+          <a href="#" class="link-card glass-card client-modal-trigger" data-resource="Portal de Acceso Web" data-desc="Ingreso directo a la plataforma administrativa en línea con tu usuario y contraseña de cliente activo.">
             <div class="link-icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
             <div class="link-content">
               <div class="link-header-row">
-                <h3 class="link-title">Portal de Acceso al Sistema</h3>
-                <span class="external-arrow">↗</span>
+                <h3 class="link-title">Portal de Acceso Web</h3>
+                <span class="external-arrow">🔒</span>
               </div>
-              <p class="link-description">Ingresa directamente a la plataforma en línea para gestionar tu negocio.</p>
-              <span class="link-tag">Acceso Web</span>
+              <p class="link-description">Ingresa a la plataforma administrativa en línea con tus credenciales de cliente activo.</p>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="link-tag tag-client">🔒 Solo Clientes</span>
+                <span class="link-tag">Acceso con Credenciales</span>
+              </div>
             </div>
           </a>
 
-          <!-- Enlace 2 -->
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="link-card glass-card">
+          <!-- Enlace 2: Manual de usuario y guías -->
+          <a href="#" class="link-card glass-card client-modal-trigger" data-resource="Manual de Usuario y Guías" data-desc="Documentación paso a paso, manuales de configuración operativa y tutoriales oficiales para usuarios con licencia.">
             <div class="link-icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
             </div>
             <div class="link-content">
               <div class="link-header-row">
                 <h3 class="link-title">Manual de Usuario y Guías</h3>
-                <span class="external-arrow">↗</span>
+                <span class="external-arrow">🔒</span>
               </div>
-              <p class="link-description">Consulta la documentación paso a paso con imágenes y preguntas frecuentes.</p>
-              <span class="link-tag">Documentación</span>
+              <p class="link-description">Instructivos paso a paso, manuales de configuración y guías operativas oficiales del sistema.</p>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="link-tag tag-client">🔒 Solo Clientes</span>
+                <span class="link-tag">Guías de Operación</span>
+              </div>
             </div>
           </a>
 
-          <!-- Enlace 3 -->
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="link-card glass-card">
-            <div class="link-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <!-- Enlace 3: Canal de soporte -->
+          <a href="https://wa.me/?text=Hola%2C%20soy%20cliente%20de%20LYRAPOINT%20con%20licencia%20activa%20y%20requiero%20asistencia%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer" class="link-card glass-card">
+            <div class="link-icon-box" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             </div>
             <div class="link-content">
               <div class="link-header-row">
-                <h3 class="link-title">Canal de Soporte y Consultas</h3>
+                <h3 class="link-title">Canal de Soporte Técnico</h3>
                 <span class="external-arrow">↗</span>
               </div>
-              <p class="link-description">Comunícate con nuestro equipo para resolver dudas o solicitar asistencia técnica.</p>
-              <span class="link-tag">Atención al Cliente</span>
+              <p class="link-description">Atención técnica directa y resolución de dudas exclusiva para clientes con licencia activa.</p>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="link-tag tag-client">🔒 Clientes Activos</span>
+                <span class="link-tag" style="color: #25d366;">WhatsApp Soporte</span>
+              </div>
             </div>
           </a>
 
-          <!-- Enlace 4 -->
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="link-card glass-card">
+          <!-- Enlace 4: Descargar actualizaciones -->
+          <a href="#" class="link-card glass-card client-modal-trigger" data-resource="Descargar Actualizaciones" data-desc="Repositorio de instaladores, complementos fiscales y parches de actualización periódica para licencias activas.">
             <div class="link-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             </div>
             <div class="link-content">
               <div class="link-header-row">
-                <h3 class="link-title">Descargas y Actualizaciones</h3>
-                <span class="external-arrow">↗</span>
+                <h3 class="link-title">Descargar Actualizaciones</h3>
+                <span class="external-arrow">🔒</span>
               </div>
-              <p class="link-description">Obtén complementos, instaladores y actualizaciones más recientes.</p>
-              <span class="link-tag">Descargas</span>
+              <p class="link-description">Descarga de las versiones más recientes, complementos y parches para sistemas instalados.</p>
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <span class="link-tag tag-client">🔒 Solo Clientes</span>
+                <span class="link-tag">Software & Parches</span>
+              </div>
             </div>
           </a>
 
@@ -594,6 +618,35 @@
     </div>
   </footer>
 
-  <script src="main.js?v=3"></script>
+  <!-- Modal Informativo para Recursos Exclusivos de Clientes -->
+  <div class="client-modal-backdrop" id="clientModal" aria-hidden="true">
+    <div class="client-modal-box">
+      <div class="client-modal-header">
+        <span class="modal-lock-badge">🔒 Área Exclusiva</span>
+        <button class="client-modal-close" id="closeClientModal" aria-label="Cerrar ventana">&times;</button>
+      </div>
+      <div class="client-modal-body">
+        <h3 id="clientModalTitle">Portal de Acceso Web</h3>
+        <p id="clientModalDesc">
+          Este recurso está reservado <strong>únicamente para clientes que ya adquirieron el sistema LYRAPOINT</strong> con licencia activa.
+        </p>
+        <div class="client-modal-callout">
+          <p>¿Eres cliente activo y necesitas tus accesos, credenciales o soporte técnico?</p>
+          <a href="#" id="modalWhatsappBtn" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Solicitar Acceso por WhatsApp
+          </a>
+        </div>
+        <div class="client-modal-footer">
+          <p>¿Aún no eres cliente y deseas contratar el sistema?</p>
+          <a href="#contacto" class="btn btn-primary btn-block" id="modalContactBtn">
+            Solicitar Información de LYRAPOINT
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js?v=6"></script>
 </body>
 </html>
